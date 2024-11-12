@@ -1,0 +1,37 @@
+@mixin h3-text
+  font-size: 2.4rem
+  padding-bottom: 1rem
+
+@mixin title-text
+  font-size: 3.6rem
+  line-height: 4.1rem
+  @include text-gradient
+  text-transform: uppercase
+
+@mixin text-gradient
+  background: $color-gradient
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+@mixin border-gradient
+  border: solid .1rem transparent
+  border-radius: 1rem
+  border-image: $color-gradient 1
+
+
+@mixin respond($breakpoint)
+  @if $breakpoint == phone
+    @media only screen and (max-width: 768px)
+      @content
+
+  @if $breakpoint == tablet
+    @media only screen and (max-width: 1000px)
+      @content
+
+  @if $breakpoint == laptops
+    @media only screen and (max-width: 1240px)
+      @content
+
+  @if $breakpoint == big-screen
+    @media only screen and (min-width: 1800px)
+      @content

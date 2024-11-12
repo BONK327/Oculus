@@ -1,0 +1,48 @@
+.top
+  min-height: calc(100vh - 9vh)
+  background-image: url(../images/top-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: bottom center
+  @include respond(laptops)
+    min-width: 100vw
+  @include respond(tablet)
+    min-height: calc(100vh - 30vh)
+    overflow: hidden
+  @include respond(phone)
+    min-height: 80vh
+  &__text
+    font-size: 1.3rem
+    margin-bottom: 5rem
+    @include respond(laptops)
+      font-size: 1.5rem
+    @include respond(tablet)
+      text-align: center
+      font-size: 2rem
+    @include respond(phone)
+      font-size: 2rem
+
+.title
+  padding-top: 16%
+  font-size: 9.6rem
+  margin-bottom: 1rem
+  font-weight: 400
+  @include respond(tablet)
+    text-align: center
+
+.subtitle
+  font-size: 3.6rem
+  margin-bottom: .5rem
+  @include respond(tablet)
+    text-align: center
+
+.buy__text
+  font-size: 1.3rem
+  padding-top: 1rem
+  @include respond(laptops)
+    font-size: 1.5rem
+  @include respond(tablet)
+    text-align: center
+  @include respond(phone)
+    font-size: 2rem
+

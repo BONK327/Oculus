@@ -1,0 +1,25 @@
+.equipment
+  margin-bottom: 10rem
+  &__title
+    margin-bottom: 5rem
+  &__box
+    display: grid
+    grid-template-columns: 2fr 1fr 1fr
+    grid-template-rows: repeat(2, 1fr)
+    grid-gap: 2rem
+    @include respond(laptops)
+      grid-gap: .8rem
+    &-text
+      @include respond(laptops)
+        font-size: 1.4rem
+        text-align: center
+    &-item--one
+      grid-row: 1 / -1
+    &-img
+      margin-bottom: 1rem
+      @include respond(laptops)
+        margin-bottom: .5rem
+    &-title
+      @include title-text
+
+

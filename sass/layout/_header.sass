@@ -1,0 +1,37 @@
+.header
+  border-bottom: .1rem solid $color-light
+  @include respond(phone)
+    opacity: 0
+    pointer-events: none
+    position: absolute
+
+.nav
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  align-items: center
+  height: 8rem
+
+.menu
+  display: flex
+  gap: 0 2rem
+
+.basket
+  position: relative
+  justify-self: end
+
+.logo
+  justify-self: center
+
+.basket--on span
+  font-size: 1.1rem
+  width: 1.5rem
+  height: 1.5rem
+  background-color: $color-black
+  border-radius: 50%
+  color: $color-light
+  position: absolute
+  display: flex
+  align-items: center
+  justify-content: center
+  bottom: 0
+  right: -.2rem

@@ -1,0 +1,122 @@
+.navigation
+  display: none
+@include respond(phone)
+  .navigation
+    display: block
+    &__toggle
+      display: none
+    &__button
+      background: $color-gradient
+      width: 8rem
+      height: 8rem
+      border-radius: 100rem
+      position: fixed
+      top: 8rem
+      right: 8rem
+      z-index: 200
+      text-align: center
+      cursor: pointer
+      @include respond(tab-port)
+        box-shadow: $box-shadow
+
+
+    &__background
+      width: 6rem
+      height: 6rem
+      border-radius: 100rem
+      background: $color-black
+      position: fixed
+      z-index: 100
+      right: 9rem
+      top: 9rem
+      transition: all .7s
+
+    &__nav
+      height: 100vh
+      width: 0
+      position: fixed
+      top: 0
+      right: 0
+      z-index: 150
+      opacity: 0
+      transition: all .5s cubic-bezier(0.68, -0.6, 0.32, 1.6)
+
+    &__list
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      list-style: none
+      width: 100%
+
+    &__item
+      text-align: center
+      &:not(:last-child)
+        margin-bottom: 5rem
+    &__link
+      &:link, &:visited
+        color: $color-white
+        font-size: 4rem
+        font-weight: 300
+        letter-spacing: .5rem
+        text-transform: uppercase
+        text-decoration: none
+        background: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%)
+        background-size: 220%
+        padding: 1rem 2rem
+        transition: all .4s
+        display: inline-block
+        border-radius: 1rem
+
+        &:hover, &:active
+          background-position: 100%
+          color: $color-text
+          transform: translateY(-1rem)
+
+    &__toggle:checked ~ &__background
+      transform: scale(80)
+    &__toggle:checked ~ &__nav
+      width: 100%
+      opacity: 1
+
+    &__icon
+      position: relative
+      margin-top: 3.7rem
+      &,
+      &::before,
+      &::after
+        width: 3rem
+        height: .2rem
+        background: $color-white
+        display: inline-block
+      &::before,
+      &::after
+        content: ""
+        position: absolute
+        left: 0
+        transition: all .2s
+      &::before
+        top: -.8rem
+      &::after
+        top: .8rem
+
+    &__button:hover &__icon::before
+      top: -1rem
+    &__button:hover &__icon::after
+      top: 1rem
+
+    &__toggle:checked + &__button &__icon
+      transition: all .1s
+      background: transparent
+    &__toggle:checked + &__button &__icon::before
+      top: 0
+      transform: rotate(135deg)
+      transition: all .4s
+    &__toggle:checked + &__button &__icon::after
+      top: 0
+      transform: rotate(-135deg)
+      transition: all .4s
+
+
+
+

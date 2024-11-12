@@ -1,0 +1,26 @@
+.buy
+  margin-bottom: 11rem
+  text-align: center
+  position: relative
+  overflow: hidden
+  &__text
+    @include respond(laptops)
+      font-size: 2rem
+  &__img
+    margin-bottom: 3rem
+  &-btn--center
+    margin: 0 auto
+  &__bg
+    font-size: 40rem
+    font-weight: 700
+    line-height: 40rem
+    background: $color-gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    opacity: .1
+    position: absolute
+    z-index: -1
+  &__animation
+    animation: line-text 5s linear infinite
+
+

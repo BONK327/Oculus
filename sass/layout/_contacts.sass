@@ -1,0 +1,40 @@
+.contacts
+  margin-bottom: 10rem
+  &__title
+    @include h3-text
+    @include respond(tablet)
+      font-size: 3rem
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: end
+  &__form
+    flex-basis: 60rem
+  &__text
+    font-size: 1.3rem
+    @include respond(tablet)
+      font-size: 1.7rem
+
+.form
+  margin-bottom: 1rem
+  position: relative
+  &__input
+    border: none
+    border-bottom: solid .1rem $color-text
+    width: 100%
+    padding: 2.2rem 7rem 2.2rem 1rem
+    outline: none
+    @include respond(laptops)
+      width: 90%
+
+  &__btn
+    width: 5rem
+    height: 5rem
+    background-color: $color-light
+    border-radius: 50%
+    border: none
+    font-weight: 700
+    text-transform: uppercase
+    position: absolute
+    right: .5rem
+    bottom: .5rem

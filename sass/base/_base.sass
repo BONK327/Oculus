@@ -1,0 +1,41 @@
+html
+  font-size: 62.5%
+  @include respond(laptops)
+    font-size: 56.25%
+  @include respond(lend)
+    font-size: 50%
+  @include respond(tablet)
+    font-size: 42.5%
+  @include respond(phone)
+   font-size: 35%
+  @include respond(big-screen)
+    font-size: 75%
+
+*, ::before, ::after
+  box-sizing: inherit
+
+a
+  color: inherit
+  text-decoration: none
+
+li
+  list-style: none
+
+img
+  max-width: 100%
+
+body
+  font-family: 'Helvetica', sans-serif
+  font-weight: 400
+  font-size: 1.6rem
+  line-height: 1.4
+  color: $color-text
+
+.container
+  max-width: 122rem
+  padding: 0 1rem
+  margin: 0 auto
+  @include respond(laptops)
+    max-width: 100rem
+  @include respond(phone)
+    max-width: 100%

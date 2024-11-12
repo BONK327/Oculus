@@ -1,0 +1,43 @@
+.accessories
+  margin-bottom: 10rem
+  &__title
+    margin-bottom: 3rem
+  &__text
+    @include title-text
+    margin-bottom: 3rem
+    @include respond(laptops)
+      text-align: center
+  &__items
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+  &__item
+    display: flex
+    flex-direction: column
+    @include border-gradient
+    padding: 2rem
+    &-img
+      margin-bottom: 1rem
+    &-title
+      @include h3-text
+      @include respond(laptops)
+        min-height: 7rem
+    &-text
+      margin-top: auto
+      margin-bottom: 4.2rem
+      @include respond(laptops)
+        margin-top: 0
+        min-height: 7rem
+    &-price
+      color: $color-black
+      font-weight: 700
+      margin-bottom: 2rem
+    &-btn
+      @include text-gradient
+      @include border-gradient
+      font-weight: 700
+      padding: .6rem
+      text-align: center
+      width: 100%
+      @include respond(laptops)
+        padding: .5rem
+        width: 95%
