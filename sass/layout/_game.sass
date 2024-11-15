@@ -10,21 +10,47 @@
     @include text-gradient
     text-transform: uppercase
     border-radius: 1rem
+    @include respond(phone)
+      padding: 2rem
+      font-size: 2rem
 
 
 .game__inner
   display: grid
   grid-template-columns: repeat(4, 1fr)
+  @include respond(phone)
+    grid-template-columns: 30% 50%
+    grid-template-rows: repeat(3, 2fr)
+    gap: 4rem
 
 .game__descr
   padding-right: 1rem
+  @include respond(phone)
+    position: sticky
+    top: calc(100vh - 70vh)
+    padding: 0
+
   &-title
     @include title-text
     margin-bottom: 1rem
   &-text
     margin-bottom: 2.4rem
+    @include respond(phone)
+      font-size: 2rem
 
 .game__item
+  &--1
+    @include respond(phone)
+      grid-column: 2 / 3
+      grid-row: 1 / 2
+  &--2
+    @include respond(phone)
+      grid-column: 2 / 3
+      grid-row: 2 / 3
+  &--3
+    @include respond(phone)
+      grid-column: 2 / 3
+      grid-row: 3 / 4
   @include border-gradient
   padding: 2rem
   display: flex
@@ -33,8 +59,14 @@
     margin-bottom: 1rem
   &-title
     @include h3-text
+    @include respond(phone)
+      font-size: 3rem
   &-text
     margin-bottom: 4rem
+    @include respond(phone)
+      font-size: 2rem
   &-link
     @include text-gradient
     margin-top: auto
+    @include respond(phone)
+      font-size: 2.5rem

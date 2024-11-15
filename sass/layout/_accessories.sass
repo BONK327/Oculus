@@ -10,17 +10,27 @@
   &__items
     display: grid
     grid-template-columns: repeat(4, 1fr)
+    @include respond(phone)
+      display: flex
+      flex-direction: column
+      max-width: 70%
+      margin: 0 auto
+      gap: 1rem
   &__item
     display: flex
     flex-direction: column
     @include border-gradient
     padding: 2rem
+    @include respond(phone)
+      font-size: 2.5rem
     &-img
       margin-bottom: 1rem
     &-title
       @include h3-text
       @include respond(laptops)
         min-height: 7rem
+      @include respond(phone)
+        font-size: 3.2rem
     &-text
       margin-top: auto
       margin-bottom: 4.2rem

@@ -9,17 +9,33 @@
     grid-gap: 2rem
     @include respond(laptops)
       grid-gap: .8rem
+    @include respond(phone)
+      display: flex
+      flex-direction: column
+      gap: 3rem
+      align-items: center
     &-text
       @include respond(laptops)
         font-size: 1.4rem
         text-align: center
+      @include respond(phone)
+        font-size: 2.5rem
     &-item--one
       grid-row: 1 / -1
     &-img
       margin-bottom: 1rem
       @include respond(laptops)
         margin-bottom: .5rem
+      @include respond(phone)
+        max-width: 100%
     &-title
       @include title-text
+
+
+.equipment__box-item--phone
+  display: none
+  @include respond(phone)
+    display: none
+
 
 
